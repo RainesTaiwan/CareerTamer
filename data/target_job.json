@@ -1,9 +1,10 @@
 {
-  "company": "Google",
-  "title": "Senior Software Engineer, Cloud AI/ML Infrastructure",
+  "company": "NVIDIA",
+  "title": "Senior DGX Cloud Automation Engineer",
   "location": "Taipei, Taiwan",
-  "url": "https://www.google.com/about/careers/applications/jobs/results/72757708658221766-senior-software-engineer-cloud-aiml-infrastructure",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/Senior-DGX-Cloud-Automation-Engineer_JR2021647",
   "found_date": "2026-08-17",
   "status": "open",
-  "last_checked": "2026-08-17"
+  "last_checked": "2026-08-17",
+  "note": "Nearest-term realistic match (K8s/Docker/CI-CD/distributed systems overlap is strong). Aspirational stretch target for later: Senior Solutions Architect, Industrial Robotics (JR2022375, Santa Clara/Remote US) - requires deep robotics AI (VLA/VLM) background and US location, not realistic short-term."
 }
