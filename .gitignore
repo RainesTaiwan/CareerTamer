@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+data/career_profile.json
+data/quest_log.md
