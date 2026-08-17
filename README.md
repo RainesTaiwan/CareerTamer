@@ -15,6 +15,33 @@ cp .env.example .env   # then fill in ANTHROPIC_API_KEY
 python careertamer.py
 ```
 
+## Running in Docker (always-on, survives reboots)
+
+The container stays up in the background (`restart: unless-stopped`) and you
+attach to it whenever you want to chat — this avoids the CLI's `input()`
+immediately hitting EOF and restart-looping when no terminal is attached.
+
+```bash
+cp .env.example .env   # then fill in ANTHROPIC_API_KEY
+docker compose up -d --build
+./chat.sh               # or chat.bat on Windows cmd/PowerShell
+```
+
+`data/` is bind-mounted into the container, so your Career Profile and Quest
+Log persist across rebuilds. `restart: unless-stopped` brings the container
+back automatically whenever the Docker daemon restarts (e.g. after a reboot)
+— on Windows/Mac, make sure Docker Desktop is set to start at login
+(Settings → General → "Start Docker Desktop when you sign in") so the
+daemon itself comes back up too.
+
+Useful commands:
+
+```bash
+docker compose logs -f careertamer   # check it's running
+docker compose down                  # stop and remove the container
+docker compose up -d --build         # rebuild after code changes
+```
+
 On first run, CareerTamer asks for your resume summary/skill tree and short-term
 goal, and saves them as your Career Profile in `data/career_profile.json`.
 
